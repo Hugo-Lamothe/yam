@@ -1,15 +1,15 @@
-// app/screens/vs-bot-game.screen.js
-
 import React, { useContext } from "react";
 import { StyleSheet, View, Button, Text } from "react-native";
 import { SocketContext } from '../contexts/socket.context';
 
 export default function VsBotGameScreen({ navigation }) {
-
+    
     const socket = useContext(SocketContext);
 
     return (
+
         <View style={styles.container}>
+
             {!socket && (
                 <>
                     <Text style={styles.paragraph}>
@@ -35,6 +35,7 @@ export default function VsBotGameScreen({ navigation }) {
                     />
                 </>
             )}
+
         </View>
     );
 }

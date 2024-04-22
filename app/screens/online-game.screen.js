@@ -9,6 +9,7 @@ export default function OnlineGameScreen({ navigation }) {
 
     return (
         <View style={styles.container}>
+
             {!socket && (
                 <>
                     <Text style={styles.paragraph}>
@@ -17,24 +18,19 @@ export default function OnlineGameScreen({ navigation }) {
                     <Text style={styles.footnote}>
                         Restart the app and wait for the server to be back again.
                     </Text>
-                </>
-            )}
-
-            {socket && (
-                <>
-                    <OnlineGameController />
-                    <Text style={styles.paragraph}>
-                        Online Game Interface
-                    </Text>
-                    <Text style={styles.footnote}>
-                        My socket id is: {socket.id}
-                    </Text>
                     <Button
                         title="Revenir au menu"
                         onPress={() => navigation.navigate('HomeScreen')}
                     />
                 </>
             )}
+
+            {socket && (
+                <>
+                    <OnlineGameController />
+                </>
+            )}
+
         </View>
     );
 }
