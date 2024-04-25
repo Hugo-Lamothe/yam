@@ -19,7 +19,7 @@ const Grid = () => {
     useEffect(() => {
         socket.on("game.grid.view-state", (data) => {
             setDisplayGrid(data['displayGrid']);
-            setCanSelectCells(data['canSelectCells'])
+            setCanSelectCells(data['canSelectCells']);
             setGrid(data['grid']);
         });
     }, []);
@@ -88,7 +88,7 @@ const styles = StyleSheet.create({
         opacity: 0.9,
     },
     canBeCheckedCell: {
-        backgroundColor: "lightyellow",
+        backgroundColor: "yellow",
     },
     topBorder: {
         borderTopWidth: 1,
