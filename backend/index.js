@@ -226,7 +226,7 @@ io.on('connection', socket => {
     //ici verifié si 5 cases sur la meme rangée ou la meme colonne ou la meme diagonale sont selectionné par le meme user
     //si ce n'est pas le cas je regarde si un alignement de 3 ou 4 est présent si c'est le cas incrémentation de la variable score sinon on passe à la suite
     //je dois d'abord realiser les fonctions dans le game.service pour ensuite les appeler ici comme ci-dessus
-    
+
 
     updateClientsViewDecks(games[gameIndex]);
     updateClientsViewChoices(games[gameIndex]);
